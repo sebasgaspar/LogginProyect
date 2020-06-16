@@ -20,7 +20,8 @@ public class Conexion {
             try {
                 Class.forName("com.mysql.jdbc.Driver");
                 //Realizamos la conexion con la base de datos
-                cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/usuarios?autoReconnect=true&useSSL=false", "sebasgaspar", "99061800642123");
+                //Configurar la base de datos
+                cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/usuarios?autoReconnect=true&useSSL=false", "username", "password");
                 System.out.println("Conexion Satisfactoria con la base de datos");
 
             } catch (SQLException ex) {
